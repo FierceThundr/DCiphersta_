@@ -61,53 +61,15 @@
 			}
     </style>
 		<script>
-			document.addEventListener("load",()=>{
+			window.addEventListener("load",()=>{
 				var element = {
-					input: document.querySelector("input"),
-					output: document.querySelector("output")
+					input: document.getElementById("input"),
+					output: document.getElementById("output")
 				};
-				input.addEventListener("input",()=>{
-					//(a) Random function generator
-					//(b) Random function instance
-					//(c) Input dictionary
-					//(d) Output dictionary
-					var a = t=>{t=t.toString();let a=1779033703,l=3144134277,h=1013904242,i=2773480762;for(let u,m=0;m<t.length;m++)u=t.charCodeAt(m),a=l^Math.imul(a^u,597399067),l=h^Math.imul(l^u,2869860233),h=i^Math.imul(h^u,951274213),i=a^Math.imul(i^u,2716044179);a=Math.imul(h^a>>>18,597399067),l=Math.imul(i^l>>>22,2869860233),h=Math.imul(a^h>>>17,951274213),i=Math.imul(l^i>>>19,2716044179),a^=l^h^i,l^=a,h^=a,i^=a;var[u,m,r,M]=[a>>>0,l>>>0,h>>>0,i>>>0];d=function(){var t=((u|=0)+(m|=0)|0)+(M|=0)|0;return M=M+1|0,u=m^m>>>9,m=(r|=0)+(r<<3)|0,r=(r=r<<21|r>>>11)+t|0,(t>>>0)/4294967296}},
-							b = 1,
-							c = "⁞JC`dc)PD:e#2>IAEK+wRmB3hTb*;Vl-S\\\"'H[x16<{ZuoYUrgM8O0zpa!=L^4?QinGNqk9, 5]s}.yt@vF|W_f&jX~(7",
-							d = [":DEvilsta:",":DHSad:",":ChadMoment:",":DShyLuvsta:",":DimensionalPhasingRespectfully:",":TakeTheL:",":doostababy:",":AngyDally:",":Thisisfine:",":DHehesta:",":DScreamsta:",":bruh:",":DHGasp:",":sneky:",":DHGrab:",":PeekaBoo:",":DHConfounded:",":blondebobross:",":DScaredsta:",":NoMusic:",":DHPog:",":ItsWizardTime:",":DPointsta:",":insanityexe:",":DHoostaAndCGLittle:",":Dalrito:",":Hello:",":luscious_scruff:",":happy_boi:",":Doosta_Heart:",":DHRock:",":DHNOOOOO:",":DHTongue:",":baby_yoda:",":onion_aftermath:",":DHWink:",":moment:",":DoostaOnion:",":DBoopsta:",":ImComingForUrButterflies:",":DDabsta:",":DHThink:",":ImLiterallyInAChair:",":DHLove:",":dallinAAAA:",":DHHappy:",":DBreadsta:",":DHLol:",":DJamsta:",":sad_boi_hours:",":DHPauseChamp:",":onion~1:"];
-							
-					//   /:[^:]+:/g
-					
-					
-					//1 = String hash
-					//2 = Middle verifier > Derived from middle hash number
-					//3 = Offset value
-					//4 = End verifier > Derived from end hash number
-					//5 = Randomizer seed
-					//111---------2---------345
-					
-					//Prepare input text by executing string.trim()
-					//(Verify if the provided input is valid ciphertext)
-						//if verification hash is valid
-						//if end verification is valid
-						//if mid verification is valid
-						//if length of "/:[^:]+:/g" regex captures is equal to input length
-					
-					//Define randomizer seed as a random emote
-					//Define random offset integer from 0 to output dictionary length
-					//Prepare randomizer instance using seed
-					//Convert input character in dictionary to indeces
-					//Offset those indeces by adding the randomizer value
-					//Modulo those values to keep them within the length of the input dictionary
-					//Convert the values to the smallest binary string with no data loss
-					//Split the string into the smallest binary string with no data loss for output dictionary
-					//Parse the binary back into an integer
-					//Add offset integer to the value
-					//Modulo the result to the output dictionary
-					//Return the output dictionary value of each character
-					//Hash the string
+				element.input.addEventListener("input",()=>{
+					element.output.value = fierce(element.input.value);
 				});
-			})
+			});
 			
 function fierce(x) {
   var a="⁞JC`dc)PD:e#2>IAEK+wRmB3hTb*;Vl-S\\\"'H[x16<{ZuoYUrgM8O0zpa!=L^4?QinGNqk9, 5]s}.yt@vF|W_f&jX~(7",
@@ -117,8 +79,8 @@ function fierce(x) {
       e=c.toString(2).length-1,
       f,
       g,
-      h=t=>{console.log("seed",t),t=t.toString();let a=1779033703,l=3144134277,h=1013904242,i=2773480762;for(let u,m=0;m<t.length;m++)u=t.charCodeAt(m),a=l^Math.imul(a^u,597399067),l=h^Math.imul(l^u,2869860233),h=i^Math.imul(h^u,951274213),i=a^Math.imul(i^u,2716044179);a=Math.imul(h^a>>>18,597399067),l=Math.imul(i^l>>>22,2869860233),h=Math.imul(a^h>>>17,951274213),i=Math.imul(l^i>>>19,2716044179),a^=l^h^i,l^=a,h^=a,i^=a;var[u,m,r,M]=[a>>>0,l>>>0,h>>>0,i>>>0];g=function(){var t=((u|=0)+(m|=0)|0)+(M|=0)|0;return M=M+1|0,u=m^m>>>9,m=(r|=0)+(r<<3)|0,r=(r=r<<21|r>>>11)+t|0,(t>>>0)/4294967296}},
-      i=t=>(t=t.toString(),t=Math.abs(t.split("").reduce(((t,a)=>(t<<5)-t+a.charCodeAt()|0),0)).toString().slice(0,9).padStart(9,f).match(/.{3}/g).map((t=>j((parseInt(t)+Math.floor(g()*c))%c))).join(""),console.log("hash",t),t),
+      h=t=>{t=t.toString();let a=1779033703,l=3144134277,h=1013904242,i=2773480762;for(let u,m=0;m<t.length;m++)u=t.charCodeAt(m),a=l^Math.imul(a^u,597399067),l=h^Math.imul(l^u,2869860233),h=i^Math.imul(h^u,951274213),i=a^Math.imul(i^u,2716044179);a=Math.imul(h^a>>>18,597399067),l=Math.imul(i^l>>>22,2869860233),h=Math.imul(a^h>>>17,951274213),i=Math.imul(l^i>>>19,2716044179),a^=l^h^i,l^=a,h^=a,i^=a;var[u,m,r,M]=[a>>>0,l>>>0,h>>>0,i>>>0];g=function(){var t=((u|=0)+(m|=0)|0)+(M|=0)|0;return M=M+1|0,u=m^m>>>9,m=(r|=0)+(r<<3)|0,r=(r=r<<21|r>>>11)+t|0,(t>>>0)/4294967296}},
+      i=t=>(t=t.toString(),Math.abs(t.split("").reduce(((t,a)=>(t<<5)-t+a.charCodeAt()|0),0)).toString().slice(0,9).padStart(9,f).match(/.{3}/g).map((t=>j((parseInt(t)+Math.floor(g()*c))%c))).join("")),
       j=r=>b[r],
       k=e=>b.indexOf(e),
       l=t=>{return f=Math.floor(Math.random()*c),h(f),j(f)+((r=(t.split("").map((t=>-1!=(t=a.indexOf(t))?t.toString(2).padStart(d,0):"")).join("").match(new RegExp(`.{1,${e}}`,"g"))??[]).map((a=>j((parseInt(a.padEnd(e,0),2)+Math.floor(g()*c))%c))).join(""))+(h(f),i(r)));var r},
@@ -127,54 +89,13 @@ function fierce(x) {
 			y=n.every(e=>b.includes(e))&&(h(f=k(n[0])),n.slice(-3).join("")==i(n.slice(1,-3).join("")));
   return[m,l][+!y](y?n:(x??""));
 }
-
-  /*
-    (a) Input config
-    (b) Output config
-    (c) Output length
-    (d) Input bit length
-    (e) Output bit length
-    (f) RNG seed variable
-    (g) RNG function
-    (h) RNG function generator
-    (i) Hashing function
-    (j) Character encode function
-    (k) Character decode function
-    (l) Primary encode function
-    (m) Primary decode function
-    
-    (y) Input string
-    (z) Input process
-  */
-
-
-
-//String seeded randomizer
-
-
-i = (s) => {
-      s=s.toString();
-      return Math.abs(
-        s.split("").reduce((h, v) => ((h << 5) - h + v.charCodeAt()) | 0, 0)
-      )
-        .toString()
-        .slice(0, 9)
-        .padStart(9,f)
-        .match(/.{3}/g)
-        .map(v=>j((parseInt(v)+Math.floor(g()*c))%c))
-        .join("");
-    }
-
-//String hashing function
-t=>(t=t.toString(),Math.abs(t.split("").reduce(((t,a)=>(t<<5)-t+a.charCodeAt()|0),0)).toString().slice(0,9).padStart(9,f).match(/.{3}/g).map((t=>j((parseInt(t)+Math.floor(g()*c))%c))).join(""));
-			
     </script>
 	</head>
 	<body>
 		<main>
-			<textarea id="input" rows="5" cols="50" placeholder="Type in a message or enter a cipher to decode..." autofocus></textarea>
+			<textarea id="input" rows="15" cols="125" placeholder="Type in a message or enter a cipher to decode..." autofocus></textarea>
 			<h3>⮝ Input / Output ⮟</h3>
-			<textarea id="output" rows="5" cols="50" placeholder="Your ciphertext or plaintext will be here..." readonly></textarea>
+			<textarea id="output" rows="15" cols="125" placeholder="Your ciphertext or plaintext will be here..." readonly></textarea>
 		</main>
 	</body>
 </html>
